@@ -33,7 +33,7 @@ hyperpar0 = list(alpha_prior = matrix(c(8, 2, 1, 9), nrow = 2, byrow = TRUE),
                  M_prior = diag(2))
 
 start <- Sys.time()
-posterior_a <- sample_posterior(initial = theta0, hyperpar = hyperpar0, S = 20000, S0 = 4000, S_rho = 5000, S0_rho = 1000, Y = Y, W = W)
+posterior_a <- sample_posterior(initial = theta0, hyperpar = hyperpar0, S = 20000, S0 = 4000, S_rho = 10000, S0_rho = 3000, Y = Y, W = W)
 end <- Sys.time()
 
 print(end - start)
