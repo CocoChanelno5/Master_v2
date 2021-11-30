@@ -11,9 +11,13 @@ load("~/Desktop/Master_v2/danedane.RData")
 # the loop through all files makes the posterior estimation
 posterior_a <- list()
 ## preparing matryx Y for unemployment rate in Poland
-dftemp<-PL_UE_ch
+dftemp <- PL_UE_ch
+#write.csv(PL_UE_ch,"PL_UE_ch.csv", row.names = TRUE)
+#write.csv(W_PL,"W_PL.csv", row.names = TRUE)
+
 Y<-dftemp%>% select(c(Name,Period, Value)) %>% pivot_wider(names_from = Name,values_from = Value)
 Y <- as.matrix(Y[,-1])
+#write.csv(Y,"PL_UE_Y.csv", row.names = TRUE)
 W<-W_PL
 table(is.na(Y))
 

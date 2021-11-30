@@ -246,7 +246,7 @@ sample_posterior <- function(initial, hyperpar, S, S0, S_rho, S0_rho, Y, W) {
     while(MH_accepted == FALSE) {
       
       if(is.na(acceptance_p[1])) {
-        c <- 0.00015
+        c <- 0.0002
         print(paste0("Initiating c to ", c))
       } else {
         if(mean(acceptance_p) < 0.2) {
